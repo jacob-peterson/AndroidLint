@@ -15,7 +15,7 @@ import org.jetbrains.uast.kotlin.KotlinUSafeQualifiedExpression
 
 class ForEachFunctionDetector : Detector(), SourceCodeScanner {
     override fun getApplicableMethodNames(): List<String> = listOf("forEach", "forEachIndexed")
-
+ //
     override fun visitMethodCall(context: JavaContext, node: UCallExpression, method: PsiMethod) {
         if (node.uastParent is KotlinUSafeQualifiedExpression) return
 
